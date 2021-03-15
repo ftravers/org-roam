@@ -6,7 +6,6 @@ go into your git managed project folder and do:
 
 : git-crypt init
 
-
 * Add a .gitattributes file
 
 #+begin_src 
