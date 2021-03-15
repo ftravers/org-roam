@@ -1,0 +1,36 @@
+#+title: git-crypt
+
+* Git Crypt a repo
+
+go into your git managed project folder and do:
+
+: git-crypt init
+
+
+* Add a .gitattributes file
+
+#+begin_src 
+secretfile filter=git-crypt diff=git-crypt
+*.key filter=git-crypt diff=git-crypt
+secretdir/** filter=git-crypt diff=git-crypt
+#+end_src
+
+* Share repo with yourself (or others)
+
+#+begin_src 
+git-crypt add-gpg-user USER_ID
+#+end_src
+
+Where ~USER_ID~ comes from [[file:20210314163823-gpg.org::*List Keys Stored Locally][List Keys Stored Locally]] 
+
+Ensure you push the updated repo to the server with the newly added
+user. 
+
+* Unlock cloned repo
+
+Once this repo is cloned anew somewhere, given you have the key
+installed on this machine that you ~add-gpg-user~'d.  Then you can:
+
+: git-crypt unlock
+
+in the repo dir.

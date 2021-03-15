@@ -1,0 +1,4 @@
+#+title: index
+[[file:20210314163526-git_crypt.org][git-crypt]]
+[[file:20210314163412-git.org][git]]
+[[file:20210314163823-gpg.org][gpg]]

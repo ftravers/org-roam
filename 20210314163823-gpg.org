@@ -1,0 +1,54 @@
+#+title: gpg
+
+* Reference
+
+https://www.devdungeon.com/content/gpg-tutorial
+
+* List Keys Stored Locally
+
+# List public keys you have stored (yours and other people's keys)
+gpg --list-keys
+
+
+#+begin_src shell
+╭─fenton@hp ~/projects/pd2 ‹master› 
+╰─$ gpg2 --list-keys                                                  1 ↵
+/home/fenton/.gnupg/pubring.kbx
+-------------------------------
+pub   rsa4096 2021-02-19 [SC]
+      E73BBB1161C3DDA938B653E4B58EBFD56CEBCF2C
+uid           [ultimate] Fenton Travers <fenton.travers@gmail.com>
+sub   rsa4096 2021-02-19 [E]
+#+end_src
+
+The fingerprint (otherwise known as the ID) is:
+
+: E73BBB1161C3DDA938B653E4B58EBFD56CEBCF2C
+
+
+# List private keys (generally only your own)
+gpg --list-secret-keys
+
+* Export a private key
+
+to share your key between computers
+
+#+begin_src 
+# Find the ID of your key first
+# The ID is the hexadecimal number
+gpg --list-secret-keys
+
+# This is your private key keep it secret!
+# Replace XXXXXXXX with your hexadecimal key ID
+gpg --export-secret-keys --armor XXXXXXXX > ./my-priv-gpg-key.asc
+
+
+#+end_src
+
+* Import a private/public key pair
+  
+#+begin_src 
+# This works the same for binary or ASCII (armored) versions of keys
+# This is also the same for private and public keys
+gpg --import ./my-priv-gpg-key.asc
+#+end_src
