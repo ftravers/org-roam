@@ -1,4 +1,6 @@
 #+title: index
+[[file:20210314191719-clojure.org][clojure]]
 [[file:20210314163526-git_crypt.org][git-crypt]]
 [[file:20210314163412-git.org][git]]
 [[file:20210314163823-gpg.org][gpg]]
+[[file:20210314194739-income_tax.org][income tax]]

@@ -1,0 +1,13 @@
+#+title: income tax
+* Getting Bank Statement Items
+
+Cannot export into CSV as people's names are stripped from the
+e-transfers and cannot keep track of which payments are from whom. You
+can just output it to the screen and highlight the transactions.
+
+There is a github project called *income-tax* that will help you process
+the file.
+
+
+
+

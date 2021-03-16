@@ -1732,7 +1732,16 @@ to something more descriptive if you want.
  - Click the Compare & pull request button
  - Click Create pull request to open a new pull request
 * creating a BARE github for local private repos
+** starting with a regular git repository
 
+Say we have a folder called my-project that is a regular git
+repository.  We can create a new bare repository from it by issuing
+the following command in the parent folder: 
+
+: git clone --bare my-project my-project.bare.git
+
+Now you have a folder ~my-project.bare.git~ (bare repos by convention end
+in .git) that can act as the remote for ~my-project~
 : git clone --bare <repo-url>
 
 When you want to create a local (non-internet) repository for
